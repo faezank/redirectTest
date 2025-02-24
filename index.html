@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <body>
-   <h2>Using JavaScript to redirect a webpage after 5 seconds </h2>
+   <h2>Redirect a webpage after 5 seconds</h2>
    <p id = "result"></p>
-   <button onclick = "redirect()">Click to Redirect to Tutorials Point</button>
+   <button onclick = "redirect()">Click to Redirect to https://adcb.go.link</button>
    <script>
       function redirect () {
          setTimeout(myURL, 5000);
@@ -12,7 +12,21 @@
       }
 
       function myURL() {
-         document.location.href = 'https://www.tutorialspoint.com/index.htm';
+         document.location.href = 'https://adcb.go.link';
+      }
+   </script>
+   <h2>Redirect a deeplink after 5 seconds</h2>
+   <p id = "result"></p>
+   <button onclick = "redirect()">Click to Redirect to adcb://uat.mib.pn</button>
+   <script>
+      function redirect () {
+         setTimeout(myURL, 5000);
+         var result = document.getElementById("result");
+         result.innerHTML = "<b> The page will redirect after delay of 5 seconds";
+      }
+
+      function myURL() {
+         document.location.href = 'adcb://uat.mib.pn?CampType=TPPRDT';
       }
    </script>
 </body>
